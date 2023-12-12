@@ -1,0 +1,45 @@
+
+<h1>flashcard</h1>
+<!-- <div *ngFor="let flashcard of flashcards">
+    <p>{{flashcard.question}}</p>
+    <p>{{flashcard.answer}}</p>
+  </div>  -->
+  
+
+  <!-- <div *ngFor="let flashcard of flashcards">
+    <p>{{flashcard.question}}</p>
+    <p>{{flashcard.answer}}</p>
+  </div>  -->
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ol {
+            list-style-type: decimal;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+          <div *ngFor="let tag of tags">
+            <li><a href="#">{{tag.tag}}</a></li>
+  </div> 
+    </ol>
+</body>
+</html>
