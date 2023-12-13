@@ -1,0 +1,26 @@
+.flashcard-container { /*Add question box container to center the box*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.question-box { /*add the question box as a style*/
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 15px;  /* Add rounded corners */
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add depth */
+  text-align: center;
+}
+
+textarea {
+  width: 600px; /* Adjust the width based on your design */
+  height: 50px;
+  padding: 10px;
+  resize: none; /* size cannot be changed manually */
+  margin-top: 50px;
+}
+
+

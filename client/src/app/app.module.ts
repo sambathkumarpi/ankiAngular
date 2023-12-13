@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlashcardQuestionPageComponent } from './flashcard-question-page/flashcard-question-page.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     FlashcardsComponent,
-    FooterComponent
+    FooterComponent,
+    FlashcardQuestionPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
