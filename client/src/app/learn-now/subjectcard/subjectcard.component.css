@@ -1,0 +1,14 @@
+.card {
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover;
+}

@@ -1,0 +1,57 @@
+<p>flashcard works!</p>
+
+
+
+<div class="container mt-4">
+  <!-- Flashcards Table -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>Subject ID</th>
+      <th>Difficulty ID</th>
+      <th>Difficulty Name</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Replace flashcardItem with the actual variable name you're using in your Angular component -->
+    <tr *ngFor="let flashcardItem of flashcards">
+      <td>{{ flashcardItem.id }}</td>
+      <td>{{ flashcardItem.question }}</td>
+      <td>{{ flashcardItem.answer }}</td>
+      <td>{{ flashcardItem.subject_id }}</td>
+      <td>{{ flashcardItem.difficulty_id }}</td>
+      <td>{{ flashcardItem.difficulty_name }}</td>
+      <td>
+        <!-- Add your edit and delete button actions here -->
+        <button class="btn btn-primary btn-sm" (click)="editFlashcard(flashcardItem)">Edit</button>
+        <button class="btn btn-danger btn-sm" (click)="deleteFlashcard(flashcardItem.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+   Flashcard Form
+  <form (ngSubmit)="submitFlashcard()" #flashcardForm="ngForm">
+    <div class="form-group">
+      <label for="question">Question:</label>
+      <input type="text" class="form-control" id="question" name="question" [(ngModel)]="flashcardFormModel.question" required>
+    </div>
+    <div class="form-group">
+      <label for="answer">Answer:</label>
+      <input type="text" class="form-control" id="answer" name="answer" [(ngModel)]="flashcardFormModel.answer" required>
+    </div>
+    <div class="form-group">
+      <label for="subject_id">Subject ID:</label>
+      <input type="number" class="form-control" id="subject_id" name="subject_id" [(ngModel)]="flashcardFormModel.subject_id" required>
+    </div>
+    <div class="form-group">
+      <label for="difficulty_id">Difficulty ID:</label>
+      <input type="number" class="form-control" id="difficulty_id" name="difficulty_id" [(ngModel)]="flashcardFormModel.difficulty_id" required>
+    </div>
+    <button type="submit" class="btn btn-success">Save Flashcard</button>
+  </form>
+</div>

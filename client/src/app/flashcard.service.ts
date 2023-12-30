@@ -3,22 +3,29 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FlashcardService {
+  private apiBaseUrl = 'http://localhost:3000/api'; // Update with your API base URL
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getFlashcardsFromDatabase(): Observable<any> {
-    return this.http.get('http://localhost:3000/flashcards/database');
+  // Get flashcards for a specific subject with difficulty level names
+  getFlashcardsBySubject(subjectId: number): Observable<any[]> {
+    const url = `${this.apiBaseUrl}/flashcards/${subjectId}`;
+    return this.http.get<any[]>(url);
   }
 
-  addFlashcard(flashcard: any): Observable<any> {
-    return this.http.post('http://localhost:3000/flashcards', flashcard);
+  // Create a new flashcard
+  createFlashcard(flashcardData: any): Observable<any> {
+    const url = `${this.apiBaseUrl}/flashcards`;
+    return this.http.post<any>(url, flashcardData);
   }
 
-  getFlashcardTags(): Observable<any> {
-    return this.http.get('http://localhost:3000/flashcards/tags');
+  updateFlashcardDifficulty(flashcardId: number, difficultyId: number): Observable<any> {
+    const url = `${this.apiBaseUrl}/flashcards/${flashcardId}/difficulty`;
+    const body = { difficulty_id: difficultyId };
+
+    return this.http.put<any>(url, body);
   }
-  
 }

@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* src/app/your-component/your-component.component.css */
+:host {
+  display: block;
+  height: 100vh;
+  background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient background */
+  position: relative;
+}
+
+/* Optional: Add some abstract shapes */
+:host::before,
+:host::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+:host::before {
+  background: radial-gradient(circle at 20% 50%, #e74c3c, transparent 40%);
+}
+
+:host::after {
+  background: radial-gradient(circle at 80% 50%, #f39c12, transparent 40%);
+}

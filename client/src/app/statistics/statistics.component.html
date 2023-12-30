@@ -1,0 +1,34 @@
+
+<a routerLink="/nave" class="btn btn-primary btn-lg" role="button">home</a>
+
+<p>statistics works!</p>
+
+<!-- statistics.component.html -->
+<div>
+  <h1>Test Session Statistics</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>Start Time</th>
+      <th>Subject ID</th>
+      <!-- Add more columns as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let session of statisticsData">
+      <td>{{ session.start_time }}</td>
+      <td>{{ session.subject_id }}</td>
+      <!-- Add more columns as needed -->
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="heatmap-container">
+  <highcharts-chart
+    [Highcharts]="highcharts"
+    [options]="chartOptions"
+    style="width: 100%; height: 400px;"
+  ></highcharts-chart>
+</div>
+
+

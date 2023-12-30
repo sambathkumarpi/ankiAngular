@@ -1,0 +1,24 @@
+<p>study-list works!</p>
+
+
+<!-- study-list.component.html -->
+
+<p>subject works!</p>
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Loop through subjects and create cards with three columns -->
+    <div class="col-md-4" *ngFor="let subject of subjects">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{ subject.name }}</h5>
+          <!-- Study button with routerLink pointing to the flashcards route -->
+          <a [routerLink]="['/flashcards', subject.name]" class="btn btn-info">
+            <i class="fas fa-book"></i> Study
+          </a>
+          <!-- You can add more details or actions here if needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

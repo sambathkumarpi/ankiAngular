@@ -1,0 +1,36 @@
+<p>subject works!</p>
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Add button with text field (centered) -->
+    <div class="col-md-9 mx-auto">
+      <div class="card mb-4">
+        <div class="card-body text-center">
+          <h5 class="card-title">Add New</h5>
+          <!-- Text field for entering the new subject name -->
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter subject name">
+          </div>
+          <!-- Add button with Font Awesome icon -->
+          <button class="btn btn-success" (click)="addSubject()">
+            <i class="fas fa-plus"></i> Add
+          </button>
+          <!-- You can customize the content or style as needed -->
+        </div>
+      </div>
+    </div>
+    <!-- Loop through subjects and create cards with three columns -->
+    <div class="col-md-4" *ngFor="let subject of subjects">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{ subject.name }}</h5>
+          <!-- Edit button with Font Awesome icon -->
+          <a [routerLink]="['/contribute/flashcards', subject.id, 'edit']" class="btn btn-primary">
+            <i class="fas fa-edit"></i> Edit
+          </a>
+          <!-- You can add more details or actions here if needed  contribute/subjects -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

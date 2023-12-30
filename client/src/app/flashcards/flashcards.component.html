@@ -1,45 +1,42 @@
+<!-- flashcard-viewer.component.html -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="flip-card" [class.flipped]="showAnswer">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="question-answer-wrapper">
+              <div class="question-centered">
+                {{ flashcards[currentIndex]?.question ?? 'Default Question' }}
+              </div>
+            </div>
+          </div>
+          <div class="flip-card-back" *ngIf="showAnswer">
+            <div class="question-answer-wrapper">
+              <div class="question-answer-content">
+                <div class="question-content">
+                  {{ flashcards[currentIndex]?.question ?? 'Default Question' }}
+                </div>
+                <!-- Removed the vertical divider -->
+                <div class="answer-content">
+                  {{ flashcards[currentIndex]?.answer ?? 'Default Answer' }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<h1>flashcard</h1>
-<!-- <div *ngFor="let flashcard of flashcards">
-    <p>{{flashcard.question}}</p>
-    <p>{{flashcard.answer}}</p>
-  </div>  -->
-  
+      <ng-container *ngIf="showAnswer">
+        <div class="mt-3 difficulty-buttons-wrapper">
+          <button class="btn btn-success full-width" (click)="setDifficulty('very easy')">Very Easy</button>
+          <button class="btn btn-primary full-width" (click)="setDifficulty('easy')">Easy</button>
+          <button class="btn btn-warning full-width" (click)="setDifficulty('difficult')">Difficult</button>
+          <button class="btn btn-danger full-width" (click)="setDifficulty('hard')">Hard</button>
+        </div>
+      </ng-container>
 
-  <!-- <div *ngFor="let flashcard of flashcards">
-    <p>{{flashcard.question}}</p>
-    <p>{{flashcard.answer}}</p>
-  </div>  -->
-
-  <!DOCTYPE html>
-<html>
-<head>
-    <style>
-        ol {
-            list-style-type: decimal;
-            padding: 0;
-            margin: 0;
-        }
-        li {
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #f8f8f8;
-            border: 1px solid #ddd;
-        }
-        a {
-            text-decoration: none;
-            color: blue;
-        }
-        a:hover {
-            color: red;
-        }
-    </style>
-</head>
-<body>
-    <ol>
-          <div *ngFor="let tag of tags">
-            <li><a href="#">{{tag.tag}}</a></li>
-  </div> 
-    </ol>
-</body>
-</html>
+      <button *ngIf="!showAnswer" class="btn btn-primary answer-button" (click)="toggleAnswer()">Show Answer</button>
+    </div>
+  </div>
+</div>
