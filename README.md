@@ -4,6 +4,16 @@
 
 
 ## ankiAngular
+
+| No # | Name | Contribution |
+|----------|----------|----------|
+| 1 | Sambathkumar PALANI | Swagger, flashcard, Heatmap |
+| 2 | Shree varshan MURALI | Swagger, flashcard, Answer |
+| 3 | Abin Thoams | Edit Contribute |
+| 4 | Geethu_sameela | Subject list, flash list and Home  |
+| 5 | ROUSSEL Alex|  Flashcard, Question |
+
+
 ankiAngular!
 
 ![image](https://github.com/sambathkumarpi/ankiAngular/assets/12695665/36d742fc-5855-4960-b196-88122fd0e60f)
