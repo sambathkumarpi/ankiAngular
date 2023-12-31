@@ -1,34 +1,13 @@
 
-<a routerLink="/nave" class="btn btn-primary btn-lg" role="button">home</a>
-
-<p>statistics works!</p>
+<div class="container d-flex align-items-center justify-content-center">
 
 <!-- statistics.component.html -->
-<div>
-  <h1>Test Session Statistics</h1>
-  <table>
-    <thead>
-    <tr>
-      <th>Start Time</th>
-      <th>Subject ID</th>
-      <!-- Add more columns as needed -->
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let session of statisticsData">
-      <td>{{ session.start_time }}</td>
-      <td>{{ session.subject_id }}</td>
-      <!-- Add more columns as needed -->
-    </tr>
-    </tbody>
-  </table>
-</div>
-<div class="heatmap-container">
+<div class="heatmap-container" id="heatmap-container" style="min-width: 310px; height: 400px; margin: 0 auto">
   <highcharts-chart
     [Highcharts]="highcharts"
     [options]="chartOptions"
-    style="width: 100%; height: 400px;"
+    style="width: 100%; height: 400px; "
   ></highcharts-chart>
 </div>
 
-
+</div>

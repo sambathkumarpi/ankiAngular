@@ -1,16 +1,10 @@
 
 
-
-<!--<ol>-->
-<!--  <div *ngFor="let tag of tags">-->
-<!--    <li><a href="#">{{tag.tag}}</a></li>-->
-<!--  </div>-->
-<!--</ol>-->
+<!--<div class="container d-flex align-items-center justify-content-center">-->
 
 
-<div class="container mt-5">
+<div class="container mt-5 align-items-center justify-content-center">
   <div class="row">
-    <!-- Loop through subjects and create cards with three columns -->
     <div class="col-md-4" *ngFor="let subject of subjects">
       <div class="card mb-4">
         <div class="card-body">
@@ -19,16 +13,9 @@
           <a [routerLink]="['/flashcards', subject.id]" class="btn btn-info">
             <i class="fas fa-book"></i> Study
           </a>
-          <!-- You can add more details or actions here if needed -->
         </div>
       </div>
     </div>
   </div>
 </div>
-<!--<div class="container mt-5">-->
-<!--  <div class="row">-->
-<!--    <div class="col-md-4" *ngFor="let item of tags">-->
-<!--      <app-card [itemName]="item"></app-card>-->
-<!--    </div>-->
-<!--  </div>-->
 <!--</div>-->
