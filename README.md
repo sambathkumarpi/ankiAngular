@@ -19,6 +19,15 @@ ankiAngular!
 ![image](https://github.com/sambathkumarpi/ankiAngular/assets/12695665/36d742fc-5855-4960-b196-88122fd0e60f)
 
 
+Swagger
+
+![image](https://github.com/sambathkumarpi/ankiAngular/assets/12695665/567a3c3d-ed98-49c5-bd46-618e19aba4b0)
+
+Swagger request
+
+![image](https://github.com/sambathkumarpi/ankiAngular/assets/12695665/51900a73-7f24-4ebb-8b92-2e2329a616ae)
+
+
 home page 
 
 ![Screenshot 2023-12-31 121655](https://github.com/sambathkumarpi/ankiAngular/assets/12695665/ab5d4ab8-6cff-42ec-868e-054c6440a3b0)
